@@ -21,12 +21,12 @@ const status = true;
 const email = `${name.toLowerCase().trim()}.${surname.toLowerCase().trim()}@test.com`;
 
 // 3 - вычисление года рождения юзера (получаем текущий год и из него вычитаем возраст)
-currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 const birthYear = currentYear - age;
 
 // 5 & 6
-nameFixed = name.toLowerCase().trim() // приводим имя и фамилию к нижнему регистру и убираем пробелы
-surnameFixed = surname.toLowerCase().trim()
+const nameFixed = name.toLowerCase().trim() // приводим имя и фамилию к нижнему регистру и убираем пробелы
+const surnameFixed = surname.toLowerCase().trim()
 // получаем 1-ую букву и приводим ее к верхнему регистру, с помощью slice(1) добавляем
 // остальную часть начиная со 2-ой буквы
 console.log(`---Карточка пользователя---
