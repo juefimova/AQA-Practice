@@ -1,4 +1,4 @@
-let room = 'bedroom';
+const room = 'bedroom';
 const timeOfDay = 20;
 const sensorTemp = null;
 
@@ -8,7 +8,7 @@ const currentTemp = sensorTemp ?? 22; // если sensorTemp = null, то зна
 const isLightOn = (timeOfDay >= 18 || timeOfDay < 6) ? true : false;
 
 // 3
-light = isLightOn ? 'включен': 'выключен';
+const light = isLightOn ? 'включен': 'выключен';
 switch (room) {
     case "bedroom":
         console.log(`Спальня: Свет ${light},
