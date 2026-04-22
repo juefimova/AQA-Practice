@@ -7,7 +7,7 @@ function waitForElement(elementName, attemptsLeft) {
     if(isFound) {
         return `Успех: Элемент ${elementName} появился!`;
     }
-    else if(!isFound && attemptsLeft > 0) {
+    else if(!isFound) {
         console.log(`Ищем элемент ${elementName}...
         Осталось попыток: ${attemptsLeft}`);
 
