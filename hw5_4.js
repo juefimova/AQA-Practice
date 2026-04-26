@@ -1,5 +1,5 @@
 class BasePage {
-    environment = 'QA';
+    static environment = 'QA';
     open(url) {
         console.log(`Открываю страницу: ${url} на окружении ${this.environment}`)
     }

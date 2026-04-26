@@ -3,9 +3,8 @@ const fwConfig = {
     set timeout(value) {
         if(value < 0 || typeof value != 'number') {
             throw new Error('Некорректный таймаут');
-        } else {
-            this._timeout = value;
         }
+        this._timeout = value;
     },
     get timeout() {
         return `Текущий таймаут: ${this._timeout}`;
