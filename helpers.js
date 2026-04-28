@@ -13,6 +13,6 @@ export function assertEqual(actual, expected, message) {
     if(actual === expected) {
         console.log(`[PASSED] ${message}`)
     } else {
-        throw new Error(`\[FAILED] ${message}: ожидалось ${expected}, получили ${actual}`);
+        throw new Error(`[FAILED] ${message}: ожидалось ${expected}, получили ${actual}`);
     }
 }
