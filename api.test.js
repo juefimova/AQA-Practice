@@ -1,5 +1,6 @@
 import {BASE_URL} from "./config.js";
 import checkResponse from "./helpers.js";
+import {assertEqual} from "./helpers.js";
 
 console.log('Task 1');
 console.log(BASE_URL);
@@ -10,7 +11,8 @@ const getUser = async () => {
     const response = await fetch(`${BASE_URL}/users/2`);
     if(checkResponse(response)) {
         const data = await response.json();
-        console.log(data.email);
+        //console.log(data.data.email);
+        assertEqual(data.data.email, 'janet.weaver@reqres.in', 'Проверка email пользователя');
     }
 }
 
