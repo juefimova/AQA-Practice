@@ -14,7 +14,7 @@ const mockResponse: ApiResponse = {
     data: {
         id: 101,
         email: "test@qa.com",
-        tags: ["e2e", "smoke"]
+        tags: ["e2e", "smoke"] //с числами подсвечивает красным
     }
 }
 
