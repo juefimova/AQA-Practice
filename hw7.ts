@@ -4,3 +4,5 @@ function generateUserPayLoad (name: string, age: number, isPremium: boolean): st
     return `User: ${name}, Age: ${age}, Premium: ${isPremium}`;
 }
 console.log(generateUserPayLoad('Alex', 23, true));
+
+//npx tsx hw7.ts для запуска
