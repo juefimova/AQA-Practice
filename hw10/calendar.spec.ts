@@ -7,5 +7,5 @@ test('Calendar test', async({page}) => {
     await page.locator('.day').filter({hasText: '15'}).click();
 
     await page.locator('.glyphicon-calendar').click();
-    expect(page.locator('td.active.day').filter({hasText: '15'})).toHaveText('15'); //нет параметра value
+    await expect(page.locator('td.active.day').filter({hasText: '15'})).toHaveText('15'); //нет параметра value
 })
