@@ -16,11 +16,12 @@ export class PopupPage {
     }
 
     async navigate(): Promise<void> {
-        this.page.goto('https://webdriveruniversity.com/Popup-Alerts/index.html')
+        await this.page.goto('/');
+
     }
 
     async openWindow(): Promise<void> {
-        this.clickButton.click();
+        await this.clickButton.click();
     }
 
     async readMessage(): Promise<string> {
@@ -28,7 +29,7 @@ export class PopupPage {
     }
 
     async closeWindow(): Promise<void> {
-        this.closeButton.click();
+        await this.closeButton.click();
     }
 
 }

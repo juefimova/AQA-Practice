@@ -5,12 +5,14 @@ export class LoginPage {
     readonly usernameInput: Locator;
     readonly passwordInput: Locator;
     readonly loginButton: Locator;
+    readonly expectedUrl: string;
 
     constructor(page: Page) {
         this.page = page;
         this.usernameInput = page.locator('#user-name');
         this.passwordInput = page.locator('#password');
         this.loginButton = page.locator('#login-button');
+        this.expectedUrl = 'https://www.saucedemo.com/inventory.html';
     }
 
     async navigate(): Promise<void> {
@@ -26,7 +28,7 @@ export class LoginPage {
     }
 
 
-    async submit() {
+    async submit(): Promise<void> {
         await this.loginButton.click();
     }
 }

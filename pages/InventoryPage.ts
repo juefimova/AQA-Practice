@@ -1,4 +1,4 @@
-import{Page, Locator} from '@playwright/test';
+import{Page} from '@playwright/test';
 import{Header} from "../components/Header";
 
 export class InventoryPage {
