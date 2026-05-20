@@ -1,12 +1,11 @@
 import {test, expect} from '@playwright/test';
 import {createRandomUser} from "../factories/userFactory";
 import {LoginPage} from "../pages/LoginPage";
-import {getFormattedDate} from "../utils/dateHelper";
+
 
 test('Login page test using Factory', async ({page}) => {
     const loginPage = new LoginPage(page);
     const newUser = createRandomUser();
-    const date = getFormattedDate();
     await loginPage.navigate();
     await loginPage.fillUsername(newUser.username);
     await loginPage.fillPassword(newUser.password);
