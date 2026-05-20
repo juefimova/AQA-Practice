@@ -7,12 +7,16 @@ export class LoginPage {
     readonly loginButton: Locator;
     readonly expectedUrl: string;
 
+    readonly expectedError: Locator;
+
     constructor(page: Page) {
         this.page = page;
         this.usernameInput = page.locator('#user-name');
         this.passwordInput = page.locator('#password');
         this.loginButton = page.locator('#login-button');
         this.expectedUrl = 'https://www.saucedemo.com/inventory.html';
+
+        this.expectedError = page.locator('[data-test="error"]');
     }
 
     async navigate(): Promise<void> {
