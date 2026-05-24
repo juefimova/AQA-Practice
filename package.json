@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "pomproject",
+=======
+  "name": "playwright-practice",
+>>>>>>> 6690f4029e60bcc24f0dbb992b4dda42683af55b
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +13,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+<<<<<<< HEAD
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.60.0",
     "@types/eslint__js": "^8.42.3",
@@ -20,5 +25,13 @@
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
     "typescript-eslint": "^8.59.3"
+=======
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.1",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.3"
+>>>>>>> 6690f4029e60bcc24f0dbb992b4dda42683af55b
   }
 }
