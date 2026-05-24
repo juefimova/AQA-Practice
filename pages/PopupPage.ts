@@ -16,7 +16,7 @@ export class PopupPage {
     }
 
     async navigate(): Promise<void> {
-        await this.page.goto('/');
+        await this.page.goto('https://webdriveruniversity.com/Popup-Alerts/index.html');
 
     }
 
