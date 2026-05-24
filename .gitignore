@@ -6,5 +6,15 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+<<<<<<< HEAD
+
 .idea/
 .env
+
+allure-report/
+allure-results/
+blob-report/
+=======
+.idea/
+.env
+>>>>>>> 6690f4029e60bcc24f0dbb992b4dda42683af55b
