@@ -7,7 +7,7 @@ export class Header {
 
     constructor(page: Page) {
         this.page = page;
-        this.cartIcon = page.locator('[data-test="shopping-cart-link"]');
+        this.cartIcon = page.locator('[ииdata-test="shopping-cart-link"]');
         this.cartCount = this.cartIcon.locator('[data-test="shopping-cart-badge"]');
     }
 

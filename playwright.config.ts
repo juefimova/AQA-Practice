@@ -18,20 +18,33 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
+
+  /* Retries: в CI тесты могут мигать из-за сети. Даем им 2 попытки. Локально- 0. */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+
+  /* Workers: GitHub runners слабее. Ограничиваем параллелизм (например, 2 потока или '50%'),
+     чтобы CI не "задохнулся", но и не работал слишком медленно. */
+
+  //Если появляются flaky тесты, то временно ставим workers 1, прогон станет последовательным и более стабильным
+  workers: process.env.CI ? 2 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['html'], // Оставляем стандартный для страховки
+    ['allure-playwright'] // Подключаем Allure
+  ],
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-     baseURL: 'https://www.saucedemo.com/',
-     headless: false,
+    baseURL: 'https://www.saucedemo.com',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    /* Сохраняем тяжелые трейсы только если тест упал и пошел на ретрай.
+       Это самый правильный подход для экономии места на сервере. */
     trace: 'on-first-retry',
   },
+
 
   /* Configure projects for major browsers */
   projects: [

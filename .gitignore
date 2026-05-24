@@ -9,3 +9,7 @@ node_modules/
 
 .idea/
 .env
+
+allure-report/
+allure-results/
+blob-report/
