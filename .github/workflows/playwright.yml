@@ -17,8 +17,13 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chromium, firefox, webkit]
+
     steps:
       - uses: actions/checkout@v4
+      
 
       # Настраиваем Node.js и кэшируем npm зависимости для ускорения CI
       - uses: actions/setup-node@v4
